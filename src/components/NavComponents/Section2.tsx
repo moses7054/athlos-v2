@@ -2,6 +2,8 @@
 
 import useScrollScale from "@/hooks/useScrollScroll";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { useRef } from "react";
 
 const textStrip =
   "move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.move.breath.workout.live.repeat.";
@@ -16,7 +18,7 @@ const Section2 = () => {
   });
   return (
     <div className="bg-white w-full flex h-[650px] justify-center relative max-[1080px]:h-[450px] max-[500px]:h-[220px] ">
-      <img
+      <Image
         ref={observedRef}
         style={{
           transform: `scale(${scale})`,
@@ -30,6 +32,8 @@ const Section2 = () => {
         src="/sample1.png"
         alt=""
         id="scrollimage"
+        width={771} // Set based on CSS width
+        height={434}
       />
       <span className="mt-auto overflow-hidden flex mb-10 max-[1080px]:mb-1 max-[500px]:mb-4">
         <h1 className="text-transparent text-[100px] font-gilroyreal2 min-w-fit scroll outline-heading-blue max-[1080px]:text-[64.2px]  max-[500px]:text-[44.5px]">

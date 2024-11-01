@@ -1,5 +1,6 @@
 import RoundRotateImage from "@/assets/NavAssets/CircleRotate.svg";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -121,11 +122,19 @@ const Hero = () => {
             </svg>
           </div>
         </div>
-        <span className="flex font-gilroyreal2 gap-8 text-white text-[22.5px] max-[1080px]:text-[11.8px] max-[1080px]:gap-4 max-[500px]:hidden">
-          <Link href={"/"}>About</Link>
-          <Link href={"/"}>Testimonials</Link>
-          <Link href={"/contactus"}>ContactUs</Link>
-          <Link href={"/"}>Trainings</Link>
+        <span className="flex font-gilroyreal2 gap-8  text-white text-[22.5px] max-[1080px]:text-[11.8px] max-[1080px]:gap-4 max-[500px]:hidden">
+          <Link href={"/"} className="hover:text-slate-300">
+            About
+          </Link>
+          <Link href={"/"} className="hover:text-slate-300">
+            Testimonials
+          </Link>
+          <Link href={"/contactus"} className="hover:text-slate-300">
+            ContactUs
+          </Link>
+          <Link href={"/"} className="hover:text-slate-300">
+            Trainings
+          </Link>
         </span>
       </div>
       <h1 className="text-white font-gilroyreal2 text-[125px] leading-[90%] p-[94px] pb-0 mt-[100px] z-50  max-[1080px]:p-0 max-[1080px]:text-[66.304px] max-[1080px]:mt-28 max-[1080px]:ml-[49px] max-[600px]:text-[38.62px] max-[600px]:ml-[12px] max-[600px]:w-[255px]">
@@ -139,9 +148,9 @@ const Hero = () => {
         </p>
 
         <div className="mr-80 mt-8 relative max-[1080px]:mr-[212px] max-[600px]:ml-auto max-[600px]:w-fit max-[600px]:mr-12">
-          <img
+          <Image
             content=""
-            src={RoundRotateImage.src}
+            src={RoundRotateImage}
             className="w-[175px] spin max-[1080px]:w-[92.8px]"
             alt=""
           />

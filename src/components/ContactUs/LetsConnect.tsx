@@ -9,7 +9,7 @@ const LetsConnect = () => {
           {/* letsConnect */}
           <div className="w-full h-[75px] flex justify-start max-custom:h-[41px] max-mid:h-[28px]">
             <p className="font-gilroyreal2 font-normal text-[74.95px] leading-[74.95px] text-[#3A4B5B] max-custom:text-[40.56px] max-custom:leading-[40.56px] max-mid:text-[24px]  ">
-              let's connect
+              let&apos;s connect
             </p>
           </div>
 

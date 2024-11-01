@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Section3Mobile = () => {
   return (
     <div className="w-full flex flex-col h-auto bg-[#E3EEF6] relative pb-12 min-[643px]:hidden">
@@ -13,10 +15,12 @@ const Section3Mobile = () => {
         <h1 className="text-[#3A4B5B] text-[20px] font-gilroyreal2 leading-[1] text-center">
           accessible to EVERYONE
         </h1>
-        <img
+        <Image
           src="/sample2.png"
           className="w-[190.2px] h-auto mt-6 ml-auto"
           alt=""
+          width={190}
+          height={257}
         />
       </div>
       <p className="font-inter font-[500] text-[14px]  leading-[24px] w-[90%] text-left mx-auto mt-8 text-[#3A4B5B]">

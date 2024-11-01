@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Section3 = () => {
   return (
     <div className="w-full flex  h-[643px] bg-[#E3EEF6] max-[1080px]:h-[341.1px] max-[643px]:hidden">
@@ -18,10 +20,12 @@ const Section3 = () => {
           </span>
         </div>
         <div className="mt-[42px] ml-auto flex w-fit relative max-[1080px]:text-[21.3px] max-[1080px]:mt-[21px]">
-          <img
+          <Image
             src="/sample2.png"
             className="w-[323px] absolute left-[-60%] max-[1080px]:w-[171.3px] max-[1080px]:h-[231.4px] max-[1080px]:left-[-60%]"
             alt=""
+            width={323} // Default width
+            height={231}
           />
           <p className="font-inter w-[440px] ml-[79px] font-[500] mt-16 leading-[32px] max-[1080px]:text-[9.5px] max-[1080px]:ml-[20.9px] max-[1080px]:w-[233.4px]  max-[1080px]:mr-10 max-[1080px]:leading-[16.978px]">
             It&apos;s not about where you begin, but how you evolve At Athlos,

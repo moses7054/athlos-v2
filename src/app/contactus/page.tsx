@@ -7,10 +7,10 @@ import React from "react";
 const page = () => {
   return (
     <>
-      {/* <Nav />
+      <Nav />
       <BecomeAPartOf />
       <LetsConnect />
-      <Faq /> */}
+      <Faq />
     </>
   );
 };
