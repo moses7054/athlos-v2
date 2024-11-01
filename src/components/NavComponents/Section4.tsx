@@ -1,7 +1,7 @@
 const Section4 = () => {
   return (
     <div className="w-full flex flex-col pl-[90px] pb-[195px] max-[1080px]:pl-[45px] max-[1080px]:pb-[77.5px]">
-      <h1 className="font-gilroyreal2 mt-[195px] text-[46px] max-[1080px]:mt-[77px] max-[1080px]:text-[24.9px]">
+      <h1 className="font-gilroyreal2 font-medium mt-[195px] text-[46px] max-[1080px]:mt-[77px] max-[1080px]:text-[24.9px] text-[#3A4B5B]">
         Service
       </h1>
       <div className="flex gap-6 mt-[60px] overflow-x-auto ">

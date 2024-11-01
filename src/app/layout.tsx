@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${gilroyblack.variable} ${gilroyreal1.variable} ${gilroyreal2.variable} ${gilroy.variable} ${gilroyheavy.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${gilroyblack.variable} ${gilroyreal1.variable} ${gilroyreal2.variable} ${gilroy.variable} ${gilroyheavy.variable} antialiased bg-white`}
       >
         {children}
       </body>
