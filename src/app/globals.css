@@ -19,3 +19,74 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.outline-heading {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.outline-heading-blue {
+  color: transparent;
+  -webkit-text-stroke: 1px #3a4b5b;
+}
+
+.outline-heading-brown {
+  color: transparent;
+  -webkit-text-stroke: 1px #81796e;
+}
+
+.outline-heading-instructor {
+  color: transparent;
+  -webkit-text-stroke: 2.5px #ffffff;
+}
+
+.spin {
+  animation: spin 10s linear infinite;
+}
+.jiggle {
+  /* No animation applied by default */
+}
+.jiggle:hover {
+  animation: jiggle 2s linear infinite;
+}
+
+.scroll {
+  animation: scroll 450s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform-origin: 53% 50%;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(10px) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .herobgpos {
+    background-position: 90% 0;
+  }
+}

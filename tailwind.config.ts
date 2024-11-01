@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimated from "tailwindcss-animated";
 
 const config: Config = {
   content: [
@@ -8,12 +9,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero_bg: "url(/AthlosBAckground.jpeg)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        gilroyreal1: ["var(--font-gilroyreal1)"],
+        gilroyreal2: ["var(--font-gilroyreal2)"],
+        inter: ["var(--font-inter)"],
+        gilroyblack: ["var(--font-gilroyblack)"],
+        gilroy: ["var(--font-gilroy-norm)"],
+      },
+      screens: {
+        mid: "764px", // Add custom breakpoint for extra small devices
+        custom: "1440px",
+      },
+      animation: {
+        "spin-3s": "spin 3s linear infinite",
+      },
     },
   },
-  plugins: [],
+  plugins: [tailwindcssAnimated],
 };
 export default config;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -11,6 +12,41 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const gilroyreal1 = localFont({
+  src: "./fonts/Gilroy-normal-400-100.ttf",
+  variable: "--font-gilroyreal1",
+  weight: "400",
+});
+
+const gilroyreal2 = localFont({
+  src: "./fonts/Gilroy-normal-700-100.ttf",
+  variable: "--font-gilroyreal2",
+  weight: "700",
+});
+
+const gilroyblack = localFont({
+  src: "./fonts/Gilroy-Black.ttf",
+  variable: "--font-gilroyblack",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "400", "500"],
+  variable: "--font-inter",
+});
+
+const gilroyheavy = localFont({
+  src: "./fonts/Gilroy-Heavy.ttf",
+  variable: "--font-gilroyheavy",
+  weight: "700",
+});
+
+const gilroy = localFont({
+  src: "./fonts/Gilroy-Regular.ttf",
+  variable: "--font-gilroy-norm",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${gilroyblack.variable} ${gilroyreal1.variable} ${gilroyreal2.variable} ${gilroy.variable} ${gilroyheavy.variable} antialiased`}
       >
         {children}
       </body>
