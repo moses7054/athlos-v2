@@ -26,6 +26,7 @@ const config: Config = {
       screens: {
         mid: "764px", // Add custom breakpoint for extra small devices
         custom: "1440px",
+        xs: "390px",
       },
       animation: {
         "spin-3s": "spin 3s linear infinite",

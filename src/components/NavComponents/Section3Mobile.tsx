@@ -17,7 +17,7 @@ const Section3Mobile = () => {
         </h1>
         <Image
           src="/sample2.png"
-          className="w-[190.2px] h-auto mt-6 ml-auto"
+          className="w-[190.2px] h-auto mt-6 ml-auto xs:w-[230px] xs:h-[310px] "
           alt=""
           width={190}
           height={257}

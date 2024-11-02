@@ -31,37 +31,37 @@ const TheAthlosCollective = () => {
           {/* Three Boxes */}
           <div className="w-full h-[231px] flex justify-between max-custom:h-[134.34px] max-mid:flex-col max-mid:h-[802px] max-mid:w-[250px]  max-mid:items-center ">
             {/* First Box */}
-            <div className="h-full w-[316px] bg-[#EDE9E5] flex flex-col font-gilroyreal2 font-normal text-[#81796E] justify-center gap-[31px] max-custom:w-[183.61px] max-custom:gap-[19.76px] max-mid:w-[250px] max-mid:h-[254px]">
+            <div className="h-full w-[316px] bg-[#EDE9E5] flex flex-col font-gilroyreal2 font-normal text-[#81796E] justify-center gap-[31px] max-custom:w-[183.61px] max-custom:gap-[19.76px] max-mid:w-[250px] max-mid:h-[254px] hover:cursor-pointer custom:hover:-translate-y-2  mid:hover:-translate-y-1 hover:-translate-y-[2px] hover:shadow-md">
               <p className="text-[65.61px] leading-[70.2px] text-center max-custom:text-[38.12px] max-custom:leading-[40.79px] max-mid:text-[48px] max-mid:leading-[51.36px]">
-                92%
+                10
               </p>
               <p className="text-[20px] leading-[21.4px] text-center max-custom:text-[11.62px] max-custom:leading-[12.49px] max-mid:text-[16px] max-mid:leading-[17.12px]">
-                SHED EXCESS WEIGHT
+                YEARS+ EXP
               </p>
             </div>
             {/* Second Box */}
-            <div className="h-full w-[316px] bg-[#EDE9E5] flex flex-col font-gilroyreal2 font-normal text-[#81796E] justify-center gap-[31px] max-custom:w-[183.61px] max-custom:gap-[19.76px] max-mid:w-[250px] max-mid:h-[254px]">
+            <div className="h-full w-[316px] bg-[#EDE9E5] flex flex-col font-gilroyreal2 font-normal text-[#81796E] justify-center gap-[31px] max-custom:w-[183.61px] max-custom:gap-[19.76px] max-mid:w-[250px] max-mid:h-[254px] hover:cursor-pointer custom:hover:-translate-y-2  mid:hover:-translate-y-1 hover:-translate-y-[2px] hover:shadow-md">
               <p className="text-[65.61px] leading-[70.2px] text-center max-custom:text-[38.12px] max-custom:leading-[40.79px]  max-mid:text-[48px] max-mid:leading-[51.36px]">
-                92%
+                900+
               </p>
               <p className="text-[20px] leading-[21.4px] text-center max-custom:text-[11.62px] max-custom:leading-[12.49px]  max-mid:text-[16px] max-mid:leading-[17.12px]">
-                SHED EXCESS WEIGHT
+                LIVES CHANGED
               </p>
             </div>
             {/*Third Box  */}
-            <div className="h-full w-[316px] bg-[#EDE9E5] flex flex-col font-gilroyreal2 font-normal text-[#81796E] justify-center gap-[31px] max-custom:w-[183.61px] max-custom:gap-[19.76px] max-mid:w-[250px] max-mid:h-[254px]">
+            <div className="h-full w-[316px] bg-[#EDE9E5] flex flex-col font-gilroyreal2 font-normal text-[#81796E] justify-center gap-[31px] max-custom:w-[183.61px] max-custom:gap-[19.76px] max-mid:w-[250px] max-mid:h-[254px] hover:cursor-pointer custom:hover:-translate-y-2  mid:hover:-translate-y-1 hover:-translate-y-[2px] hover:shadow-md">
               <p className="text-[65.61px] leading-[70.2px] text-center max-custom:text-[38.12px] max-custom:leading-[40.79px]  max-mid:text-[48px] max-mid:leading-[51.36px]">
-                92%
+                15+
               </p>
               <p className="text-[20px] leading-[21.4px] text-center max-custom:text-[11.62px] max-custom:leading-[12.49px]  max-mid:text-[16px] max-mid:leading-[17.12px]">
-                SHED EXCESS WEIGHT
+                COUNTRIES
               </p>
             </div>
           </div>
 
           {/* Learn More */}
-          <div className="w-[317px] h-[48px] border-[2px] border-[#81796E] flex justify-center items-center max-custom:w-[184px] max-custom:h-[27.89px] max-mid:w-[280px] max-mid:h-[40px]">
-            <p className="font-gilroyreal2 font-normal text-[14px] leading-[16.52px] text-[#3A4B5B] max-custom:text-[8.13px] max-custom:leading-[9.6px] max-mid:text-[12px] max-mid:leading-[14.16px]">
+          <div className="w-[317px] h-[48px] border-[2px] border-[#81796E] flex justify-center items-center max-custom:w-[184px] max-custom:h-[27.89px] max-mid:w-[280px] max-mid:h-[40px] hover:bg-[#EDE9E5]  hover:text-[#81796E] text-[#3A4B5B] hover:cursor-pointer">
+            <p className="font-gilroyreal2 font-normal text-[14px] leading-[16.52px]  max-custom:text-[8.13px] max-custom:leading-[9.6px] max-mid:text-[12px] max-mid:leading-[14.16px] hover:bg-[#EDE9E5] hover:text-[#81796E]">
               LEARN MORE
             </p>
           </div>

@@ -60,7 +60,7 @@ const Section2 = () => {
         priority
       />
       <div className="mt-auto overflow-hidden flex mb-10 max-[1080px]:mb-1 max-[500px]:mb-4 ">
-        <h1 className="text-outlie-stripe text-[100px] font-gilroyreal2 min-w-fit scroll outline-heading-blue max-[1080px]:text-[64.2px]  max-[500px]:text-[44.5px]  ">
+        <h1 className="text-outlie-stripe font-normal text-[100px] font-gilroyreal2 min-w-fit scroll outline-heading-blue max-[1080px]:text-[64.2px]  max-[500px]:text-[44.5px]  ">
           {textStrip}
           {textStrip}
         </h1>
