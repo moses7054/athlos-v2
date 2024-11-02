@@ -42,7 +42,7 @@ const Section4 = () => {
               <p className="text-base mt-4 text-white max-w-[355px] max-[1080px]:w-[247px] max-[1080px]:text-[8.6px] max-mid:w-[180px] max-mid:mt-0 max-mid:leading-[17px]">
                 {ele.desc}
               </p>
-              <button className="w-[259px] h-[48px] bg-white text-[#3A4B5B] mt-7 uppercase font-gilroyreal2 max-[1080px]:w-[140.3px] max-[1080px]:h-[26.3px] max-[1080px]:text-[7.5px] max-mid:mt-2">
+              <button className="w-[259px] h-[48px] hover:bg-blue-100 bg-white text-[#3A4B5B] mt-7 uppercase font-gilroyreal2 max-[1080px]:w-[140.3px] max-[1080px]:h-[26.3px] max-[1080px]:text-[7.5px] max-mid:mt-2">
                 Learn More
               </button>
             </div>

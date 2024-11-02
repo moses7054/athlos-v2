@@ -29,7 +29,7 @@ const config: Config = {
         xs: "390px",
       },
       animation: {
-        "spin-3s": "spin 3s linear infinite",
+        "spin-4s": "spin 4s linear infinite",
       },
     },
   },

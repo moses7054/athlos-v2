@@ -37,7 +37,7 @@ const Instructore = () => {
               src={RoundPic}
               alt="img"
               className="w-[175px] h-[178px] absolute right-0 bottom-0 max-custom:w-[92px] max-custom:h-[94px]
-              max-mid:w-[82px] max-mid:h-[84px] animate-spin-3s "
+              max-mid:w-[82px] max-mid:h-[84px] animate-spin-4s "
             />
           </div>
         </div>

@@ -36,7 +36,7 @@ const ComingSoon = () => {
 
 export default ComingSoon;
 
-const BottomComponent = () => {
+export const BottomComponent = () => {
   return (
     <>
       <div className="w-full h-[100px] bg-[#F8F8F8] flex justify-center items-center max-custom:h-[64px]">

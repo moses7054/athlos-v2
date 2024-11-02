@@ -15,8 +15,8 @@ const LetsConnect = () => {
 
   const toggleIndex = (i: number) => {
     console.log(i, index[i]);
-    setIndex((prevArray) => {
-      const newArray = [...prevArray];
+    setIndex(() => {
+      const newArray = [false, false, false, false, false, false, false];
       newArray[i] = !newArray[i]; // Toggle the boolean at the specified index
       console.log(newArray);
       return newArray;
