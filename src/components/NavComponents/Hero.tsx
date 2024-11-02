@@ -142,7 +142,8 @@ const Hero = () => {
         athelete <br></br>
         <span className="outline-heading ">within</span>
       </h1>
-      <span className="flex flex-col w-full items-end  text-[18px] max-[1080px]:mr-0 max-[600px]:items-start max-[600px]:ml-[12px] max-[600px]:w-full">
+      {/* desktop - tablet */}
+      <span className="flex flex-col w-full items-end  text-[18px] max-[1080px]:mr-0 max-[600px]:items-start max-[600px]:ml-[12px] max-[600px]:hidden">
         <p className="text-white w-[500px] z-50 max-[1080px]:text-[9.55px] max-[1080px]:w-[248px] max-[1080px]:mr-12 max-[600px]:text-[12px] max-[600px]:w-[202px] max-[600px]:mt-[28px]">
           Progress is personal. Join the journey into new realms of movement.
         </p>
@@ -155,6 +156,36 @@ const Hero = () => {
             alt=""
           />
           <div className="absolute left-[5px] right-0 top-[2px] bottom-0 flex justify-center items-center jiggle ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="43"
+              height="42"
+              fill="none"
+              viewBox="0 0 43 42"
+              className="max-[1080px]:w-[25px]"
+            >
+              <path
+                fill="#D1D2D4"
+                d="M42.81 3.4A2.637 2.637 0 0040.218.72L16.487.341a2.637 2.637 0 10-.084 5.273l21.093.337-.337 21.093a2.637 2.637 0 105.273.084l.379-23.729zM4.295 41.78L42.009 5.25l-3.67-3.788L.626 37.992l3.669 3.788z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </span>
+      {/* mobile */}
+      <span className="flex-col w-full px-4 hidden max-[600px]:flex">
+        <p className="text-white w-[500px] max-w-[200px] z-50 max-[1080px]:text-[9.55px] max-[1080px]:w-[248px] max-[1080px]:mr-12 max-[600px]:text-[12px] max-[600px]:w-[202px] max-[600px]:mt-[28px]">
+          Progress is personal. Join the journey into new realms of movement.
+        </p>
+
+        <div className="relative mt-[32px] ml-auto">
+          <Image
+            content=""
+            src={RoundRotateImage}
+            className="w-[175px] spin max-[1080px]:w-[92.8px]"
+            alt=""
+          />
+          <div className="jiggle absolute left-[5px] right-0 top-[2px] bottom-0 flex justify-center items-center jiggle ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="43"
