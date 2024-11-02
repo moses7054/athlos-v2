@@ -34,15 +34,15 @@ const Section4 = () => {
                 background: `url(${"/carouselcard.png"})`,
                 backgroundSize: "cover",
               }}
-              className="flex flex-col min-w-[448px] min-h-[537px] p-[30px] max-[1080px]:min-w-[242px] max-[1080px]:min-h-[290px]"
+              className="flex flex-col min-w-[448px] min-h-[537px] p-[30px] max-[1080px]:min-w-[242px] max-[1080px]:min-h-[290px] max-mid:pb-5 max-mid:pl-5"
             >
-              <h1 className="text-3xl text-white font-gilroyreal2 mt-auto uppercase max-[1080px]:text-[19.5px]">
+              <h1 className="text-3xl text-white font-gilroyreal2 mt-auto uppercase max-[1080px]:text-[19.5px] max-mid:w-[200px]">
                 {ele.title}
               </h1>
-              <p className="text-base mt-4 text-white max-w-[355px] max-[1080px]:w-[247px] max-[1080px]:text-[8.6px]">
+              <p className="text-base mt-4 text-white max-w-[355px] max-[1080px]:w-[247px] max-[1080px]:text-[8.6px] max-mid:w-[180px] max-mid:mt-0 max-mid:leading-[17px]">
                 {ele.desc}
               </p>
-              <button className="w-[259px] h-[48px] bg-white text-[#3A4B5B] mt-7 uppercase font-gilroyreal2 max-[1080px]:w-[140.3px] max-[1080px]:h-[26.3px] max-[1080px]:text-[7.5px]">
+              <button className="w-[259px] h-[48px] bg-white text-[#3A4B5B] mt-7 uppercase font-gilroyreal2 max-[1080px]:w-[140.3px] max-[1080px]:h-[26.3px] max-[1080px]:text-[7.5px] max-mid:mt-2">
                 Learn More
               </button>
             </div>

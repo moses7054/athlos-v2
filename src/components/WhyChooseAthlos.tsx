@@ -53,8 +53,7 @@ const WhyChooseAthlos = () => {
                 HOLISTIC GROWTH
               </div>
               <div className="w-full h-[140px] font-inter font-medium text-[18px] leading-[32px] text-center max-custom:h-[74px] max-custom:text-[9.55px] max-custom:leading-[23.59px] max-mid:h-auto max-mid:text-[13.27px] max-mid:leading-[23.59px]">
-                Neem je je al tijden voor om nou écht eens iets aan sport te
-                gaan doen? Dan is fitlab: dé studio om de beste
+                fostering a deeper connection between your body and mind.
               </div>
             </div>
 
@@ -76,8 +75,7 @@ const WhyChooseAthlos = () => {
                 HOLISTIC GROWTH
               </div>
               <div className="w-full h-[140px] font-inter font-medium text-[18px] leading-[32px] text-center max-custom:h-[74px] max-custom:text-[9.55px] max-custom:leading-[23.59px] max-mid:h-auto max-mid:text-[13.27px] max-mid:leading-[23.59px]">
-                Neem je je al tijden voor om nou écht eens iets aan sport te
-                gaan doen? Dan is fitlab: dé studio om de beste
+                it&apos;s about enabling you to move with freedom and ease.
               </div>
             </div>
 
@@ -102,8 +100,8 @@ const WhyChooseAthlos = () => {
                 HOLISTIC GROWTH
               </div>
               <div className="w-full h-[140px] font-inter font-medium text-[18px] leading-[32px] text-center max-custom:h-[74px] max-custom:text-[9.55px] max-custom:leading-[23.59px] max-mid:h-auto max-mid:text-[13.27px] ">
-                Neem je je al tijden voor om nou écht eens iets aan sport te
-                gaan doen? Dan is fitlab: dé studio om de beste
+                Using data-driven insights and real-time feedback, we help you
+                reach peak performance.
               </div>
             </div>
           </div>

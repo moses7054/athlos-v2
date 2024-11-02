@@ -25,10 +25,11 @@ const VisionStatement = () => {
           max-mid:w-[280px] max-mid:h-[271px] max-mid:gap-[40px]"
             >
               <p className="w-full h-auto text-start text-[32px] leading-[34.24px] max-custom:text-[17.01px] max-custom:leading-[18.2px] max-mid:text-[20px] max-mid:leading-[21.4px]">
-                The website’s sleek design and intuitive navigation make booking
-                classes and managing my schedule so easy. The modern,
-                professional feel really reflects the Athlos brand, and I love
-                how everything is right at my fingertips!
+                IN 2018, A FITNESS COACH AND ATHLETE FORMED A STRONG BOND
+                THROUGH TRAINING, REALIZING THE FITNESS COMMUNITY LACKED A TRUE
+                SENSE OF BELONGING. TOGETHER, THEY ENVISIONED ATHLOS—A SPACE FOR
+                CONNECTION, GROWTH, AND SHARED MILESTONES ON THE JOURNEY TO
+                PERSONAL EXCELLENCE.
               </p>
               <p className="w-full h-auto text-start text-[20px] leading-[21.4px] max-custom:text-[10.63px] max-custom:leding-[11.38px] max-mid:text-[20px] max-mid:leading-[21.4px]">
                 -Prithu
