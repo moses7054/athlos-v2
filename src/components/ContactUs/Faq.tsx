@@ -5,8 +5,8 @@ import TrainerImage from "@/assets/ContactUS/ImageFaq.jpg";
 const Faq = () => {
   return (
     <>
-      <div className="w-full h-[950px] flex justify-center items-start max-custom:h-[630.4px] max-mid:h-[1196.24px]">
-        <div className="w-[1245px] h-[857px] flex justify-between  max-custom:w-[673.84px] max-custom:h-[463.54px] max-mid:h-[1096px] max-mid:w-[280px] max-mid:flex-col">
+      <div className="w-full h-[950px] flex justify-center items-start max-custom:h-[630.4px] max-mid:h-[1200.24px]">
+        <div className="w-[1245px] h-[857px] flex justify-between  max-custom:w-[673.84px] max-custom:h-[463.54px] max-mid:h-[1096px] max-mid:max-w-[280px] max-mid:flex-col">
           {/* First Column Faq */}
           <div className="w-[427.13px] h-full flex flex-col justify-between max-custom:w-[231.18px] max-mid:h-[436.24px] max-mid:w-[280px]">
             {/* Faq text */}
@@ -28,41 +28,48 @@ const Faq = () => {
           </div>
 
           {/* Questions */}
-          <div className="w-[736px] h-[541.7px] mt-[104px] flex flex-col justify-between max-custom:w-[398.35px] max-custom:h-[291.58px] max-custom:mt-[55.99px] max-mid:w-[281px] max-mid:h-[624px]">
-            <div className="w-full h-[114.42px] flex flex-col justify-between max-custom:h-[61.53px] max-mid:h-[135px]">
-              <p className="font-gilroyreal2 font-normal text-[#3A4B5B] text-[31.77px] max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[21.4px]">
-                Q1 WHAT OUR CLIENTS HAVE TO SAY ABOUT US?
+          <div className="w-[736px] h-auto  flex flex-col justify-between max-custom:w-[398.35px] max-mid:max-w-[280px] max-mid:gap-[28px] max-mid:mt-[30px]">
+            <div className="w-full h-auto flex flex-col justify-between ">
+              <p className="font-gilroyreal2 h-auto w-auto font-normal text-[#3A4B5B] text-[31.77px] max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[20px] ">
+                Q1.WHAT DO OUR CLIENTS HAVE TO SAY ABOUT OUR GYM?
               </p>
-              <p className="font-inter font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[14px] max-mid:leading-[24px]">
-                Neem je je al tijden voor om nou écht eens iets aan sport te
-                gaan doen? Dan is fitlab: dé studio om de beste
-              </p>
-            </div>
-            <div className="w-full h-[114.42px] flex flex-col justify-between max-custom:h-[61.53px] max-mid:h-[135px]">
-              <p className="font-gilroyreal2 font-normal text-[#3A4B5B] text-[31.77px]  max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[21.4px]">
-                Q1 WHAT OUR CLIENTS HAVE TO SAY ABOUT US?
-              </p>
-              <p className="font-inter font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[14px] max-mid:leading-[24px]">
-                Neem je je al tijden voor om nou écht eens iets aan sport te
-                gaan doen? Dan is fitlab: dé studio om de beste
+              <p className="font-inter h-auto w-auto font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[10px] max-mid:leading-[18px]">
+                Our clients love the supportive environment and the motivation
+                they get from our team. Many say joining our gym was a turning
+                point in their fitness journey!
               </p>
             </div>
-            <div className="w-full h-[114.42px] flex flex-col justify-between max-custom:h-[61.53px] max-mid:h-[135px]">
-              <p className="font-gilroyreal2 font-normal text-[#3A4B5B] text-[31.77px]  max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[21.4px]">
-                Q1 WHAT OUR CLIENTS HAVE TO SAY ABOUT US?
+            <div className="w-full h-auto flex flex-col justify-between ">
+              <p className="font-gilroyreal2 font-normal text-[#3A4B5B] text-[31.77px]  max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[20px]">
+                Q2.HOW EXPERIENCED ARE THE TRAINERS AT OUR GYM?
               </p>
-              <p className="font-inter font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[14px] max-mid:leading-[24px]">
-                Neem je je al tijden voor om nou écht eens iets aan sport te
-                gaan doen? Dan is fitlab: dé studio om de beste
+              <p className="font-inter font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[10px] max-mid:leading-[18px]">
+                Our trainers are highly certified and experienced in various
+                fitness disciplines. They’re dedicated to helping members
+                achieve their personal fitness goals safely and effectively.
               </p>
             </div>
-            <div className="w-full h-[114.42px] flex flex-col justify-between max-custom:h-[61.53px] max-mid:h-[135px]">
-              <p className="font-gilroyreal2 font-normal text-[#3A4B5B] text-[31.77px]  max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[21.4px]">
-                Q1 WHAT OUR CLIENTS HAVE TO SAY ABOUT US?
+            <div className="w-full h-auto flex flex-col justify-between ">
+              <p className="font-gilroyreal2 font-normal text-[#3A4B5B] text-[31.77px]  max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[20px]">
+                Q3.WHAT MAKES OUR GYM DIFFERENT FROM OTHERS?
               </p>
-              <p className="font-inter font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[14px] max-mid:leading-[24px]">
-                Neem je je al tijden voor om nou écht eens iets aan sport te
-                gaan doen? Dan is fitlab: dé studio om de beste
+              <p className="font-inter font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[10px] max-mid:leading-[18px]">
+                We focus on personalized training and have state-of-the-art
+                equipment to cater to all fitness levels. Our supportive
+                community and dedicated staff make our gym feel like a second
+                home.
+              </p>
+            </div>
+            <div className="w-full h-auto flex flex-col justify-between ">
+              <p className="font-gilroyreal2 font-normal text-[#3A4B5B] text-[31.77px]  max-custom:text-[17.2px] max-custom:leading-[18.4px] max-mid:text-[20px] max-mid:leading-[20px]">
+                Q4.HOW DOES OUR GYM SUPPORT MEMBERS IN REACHING THEIR FITNESS
+                GOALS?
+              </p>
+              <p className="font-inter font-medium text-[17.87px] leading-[31.77px] text-[#3A4B5B] max-custom:text-[9.67px] max-custom:leading-[17.2px] max-mid:text-[10px] max-mid:leading-[18px]">
+                We provide tailored workout plans, progress tracking, and
+                regular assessments. Our trainers work closely with each member,
+                ensuring consistent support and guidance on their fitness
+                journey.
               </p>
             </div>
           </div>

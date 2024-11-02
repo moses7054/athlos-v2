@@ -121,3 +121,74 @@ body {
     background-position: 90% 0;
   }
 }
+
+/* radio buttons */
+.checker {
+  width: 25.45px;
+  height: 25.45px;
+  /* min-width: 25.45px;
+  min-height: 25.45px; */
+  border-radius: 50%;
+  background: white;
+  border: 2.83px solid #3a4b5b;
+}
+
+.dot {
+  width: 11.31px;
+  /* min-width: 11.31px;
+  min-height: 11.31px; */
+  height: 11.31px;
+  background-color: #3a4b5b;
+  border-radius: 50%;
+}
+
+@media (min-width: 764px) {
+  .checker {
+    width: 13.77px;
+    /* min-height: 13.77px; */
+    height: 13.77px;
+    /* min-height: 13.77px; */
+
+    border: 1.53px solid #3a4b5b;
+  }
+  .dot {
+    width: 6.12px;
+    /* min-width: 6.12px;
+    min-height: 6.12px; */
+    height: 6.12px;
+  }
+}
+
+@media (min-width: 390px) {
+  .checker {
+    width: 22.36px;
+    height: 22.36px;
+    /* min-width: 22.36px;
+    min-height: 22.36px; */
+
+    border: 2.48px solid #3a4b5b;
+  }
+  .dot {
+    width: 9.94px;
+    height: 9.94px;
+    /* min-width: 9.94px;
+    min-height: 9.94px; */
+  }
+}
+
+@media (min-width: 320px) {
+  .checker {
+    width: 15.36px;
+    height: 15.36px;
+    /* min-width: 15.36px;
+    min-height: 15.36px; */
+
+    border: 2.48px solid #3a4b5b;
+  }
+  .dot {
+    width: 8.14px;
+    height: 8.14px;
+    /* min-width: 8.14px;
+    min-height: 8.14px; */
+  }
+}

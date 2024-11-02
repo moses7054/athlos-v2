@@ -1,6 +1,28 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const LetsConnect = () => {
+  const [index, setIndex] = useState<boolean[]>([
+    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const toggleIndex = (i: number) => {
+    console.log(i, index[i]);
+    setIndex((prevArray) => {
+      const newArray = [...prevArray];
+      newArray[i] = !newArray[i]; // Toggle the boolean at the specified index
+      console.log(newArray);
+      return newArray;
+    });
+  };
+
   return (
     <>
       <div className="w-full h-[831px] flex items-center py-[80px] justify-center max-custom:h-[450.18px] max-custom:py-[43.3px] max-mid:h-[805.29px] max-mid:py-[40px]">
@@ -29,67 +51,144 @@ const LetsConnect = () => {
 
               {/* radio buttons */}
               <div className="w-full h-[413px] flex flex-col font-gilroyreal1 font-normal text-[22.62px] leading-[40.72px] text-[#3A4B5B] mt-[33.62px] justify-between max-custom:h-[229.3px] max-custom:text-[12.24px] max-custom:leading-[22.04px] max-custom:mt-[17.62px] max-mid:h-[176px] max-mid:text-[16.27px] max-mid:leading-[15px] max-mid:mt-[24px] max-mid:flex-wrap">
-                <div className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]">
+                <div
+                  className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px] "
+                  onClick={() => toggleIndex(0)}
+                >
                   <input
+                    className="hidden"
                     type="radio"
                     id="personal"
                     value={"personal"}
                     name="personal"
                   />
+                  <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
+                    <span
+                      className={`dot ${
+                        index[0] ? null : "hidden"
+                      } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
+                    />
+                  </span>
                   <label htmlFor="personal">Personal training</label>
                 </div>
-                <div className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]">
+                <div
+                  onClick={() => toggleIndex(1)}
+                  className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]"
+                >
                   <input
+                    className="hidden"
                     type="radio"
                     id="personal"
                     value={"personal"}
                     name="personal"
                   />
+                  <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
+                    <span
+                      className={`dot ${
+                        index[1] ? null : "hidden"
+                      } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
+                    />
+                  </span>
                   <label htmlFor="personal">Group Classes</label>
                 </div>
-                <div className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]">
+                <div
+                  onClick={() => toggleIndex(2)}
+                  className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]"
+                >
                   <input
+                    className="hidden"
                     type="radio"
                     id="personal"
                     value={"personal"}
                     name="personal"
                   />
+                  <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
+                    <span
+                      className={`dot ${
+                        index[2] ? null : "hidden"
+                      } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
+                    />
+                  </span>
                   <label htmlFor="personal">Remote Coaching</label>
                 </div>
-                <div className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]">
+                <div
+                  onClick={() => toggleIndex(3)}
+                  className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]"
+                >
                   <input
+                    className="hidden"
                     type="radio"
                     id="personal"
                     value={"personal"}
                     name="personal"
                   />
+                  <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
+                    <span
+                      className={`dot ${
+                        index[3] ? null : "hidden"
+                      } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
+                    />
+                  </span>
                   <label htmlFor="personal">Nutrition</label>
                 </div>
-                <div className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]">
+                <div
+                  onClick={() => toggleIndex(4)}
+                  className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]"
+                >
                   <input
+                    className="hidden"
                     type="radio"
                     id="personal"
                     value={"personal"}
                     name="personal"
                   />
+                  <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
+                    <span
+                      className={`dot ${
+                        index[4] ? null : "hidden"
+                      } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
+                    />
+                  </span>
                   <label htmlFor="personal">Athlete Based</label>
                 </div>
-                <div className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]">
+                <div
+                  onClick={() => toggleIndex(5)}
+                  className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]"
+                >
                   <input
+                    className="hidden"
                     type="radio"
                     id="personal"
                     value={"personal"}
                     name="personal"
                   />
+                  <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
+                    <span
+                      className={`dot ${
+                        index[5] ? null : "hidden"
+                      } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
+                    />
+                  </span>
                   <label htmlFor="personal">For her</label>
                 </div>
-                <div className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] max-mid:gap-[8px]">
+                <div
+                  onClick={() => toggleIndex(6)}
+                  className="w-full flex justify-start gap-[28.8px] h-[41px] items-center max-custom:h-[23px] max-custom:gap-[15.3px] max-mid:h-[40px] max-mid:w-[115px] "
+                >
                   <input
+                    className="hidden"
                     type="radio"
                     id="personal"
                     value={"personal"}
                     name="personal"
                   />
+                  <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
+                    <span
+                      className={`dot ${
+                        index[6] ? null : "hidden"
+                      } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
+                    />
+                  </span>
                   <label htmlFor="personal">Other Query</label>
                 </div>
               </div>
