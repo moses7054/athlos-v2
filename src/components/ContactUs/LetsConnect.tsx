@@ -12,15 +12,94 @@ const LetsConnect = () => {
     false,
     false,
   ]);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [service, setService] = useState("Personal training"); // Default service
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const toggleIndex = (i: number) => {
-    console.log(i, index[i]);
     setIndex(() => {
       const newArray = [false, false, false, false, false, false, false];
-      newArray[i] = !newArray[i]; // Toggle the boolean at the specified index
-      console.log(newArray);
+      newArray[i] = !newArray[i];
+      let selectedService = "";
+      switch (i) {
+        case 0:
+          selectedService = "Personal training";
+          break;
+        case 1:
+          selectedService = "Group Classes";
+          break;
+        case 2:
+          selectedService = "Remote Coaching";
+          break;
+        case 3:
+          selectedService = "Nutrition";
+          break;
+        case 4:
+          selectedService = "Athlete Based";
+          break;
+        case 5:
+          selectedService = "For her";
+          break;
+        case 6:
+          selectedService = "Other Query";
+          break;
+        default:
+          selectedService = "Personal training"; // Default if no match
+      }
+      setService(selectedService);
       return newArray;
     });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitMessage("Submitting...");
+
+    const formData = {
+      service: service,
+      name: name,
+      phone: phone,
+      email: email,
+      message: message,
+    };
+
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitMessage("Form submitted successfully!");
+        setName("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
+        setIndex([true, false, false, false, false, false, false]); //reset service to default
+        setService("Personal training");
+
+        setTimeout(() => {
+          setSubmitMessage(""); // Clear success message after a delay
+        }, 3000); // Clear message after 3 seconds
+      } else {
+        setSubmitMessage("Error submitting form. Please try again.");
+        setTimeout(() => {
+          setSubmitMessage(""); // Clear error message after a delay
+        }, 3000); // Clear message after 3 seconds
+      }
+    } catch (error) {
+      console.error("Error!", error);
+      setSubmitMessage("Error submitting form. Please try again.");
+      setTimeout(() => {
+        setSubmitMessage(""); // Clear error message after a delay
+      }, 3000); // Clear message after 3 seconds
+    }
   };
 
   return (
@@ -36,7 +115,10 @@ const LetsConnect = () => {
           </div>
 
           {/* Form */}
-          <div className="w-[1245px] h-[518px] flex flex-row justify-between max-custom:w-[673.84px] max-custom:h-[280.36px] max-mid:w-[280px] max-mid:h-[665.29px] max-mid:flex-col">
+          <form
+            onSubmit={handleSubmit}
+            className="w-[1245px] h-[518px] flex flex-row justify-between max-custom:w-[673.84px] max-custom:h-[280.36px] max-mid:w-[280px] max-mid:h-[665.29px] max-mid:flex-col"
+          >
             {/* Which Services */}
 
             {/* First Column */}
@@ -60,7 +142,9 @@ const LetsConnect = () => {
                     type="radio"
                     id="personal"
                     value={"personal"}
-                    name="personal"
+                    name="service"
+                    checked={index[0]}
+                    onChange={() => {}} // Necessary for controlled component
                   />
                   <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
                     <span
@@ -78,9 +162,11 @@ const LetsConnect = () => {
                   <input
                     className="hidden"
                     type="radio"
-                    id="personal"
-                    value={"personal"}
-                    name="personal"
+                    id="groupClasses"
+                    value={"groupClasses"}
+                    name="service"
+                    checked={index[1]}
+                    onChange={() => {}} // Necessary for controlled component
                   />
                   <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
                     <span
@@ -89,7 +175,7 @@ const LetsConnect = () => {
                       } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
                     />
                   </span>
-                  <label htmlFor="personal">Group Classes</label>
+                  <label htmlFor="groupClasses">Group Classes</label>
                 </div>
                 <div
                   onClick={() => toggleIndex(2)}
@@ -98,9 +184,11 @@ const LetsConnect = () => {
                   <input
                     className="hidden"
                     type="radio"
-                    id="personal"
-                    value={"personal"}
-                    name="personal"
+                    id="remoteCoaching"
+                    value={"remoteCoaching"}
+                    name="service"
+                    checked={index[2]}
+                    onChange={() => {}} // Necessary for controlled component
                   />
                   <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
                     <span
@@ -109,7 +197,7 @@ const LetsConnect = () => {
                       } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
                     />
                   </span>
-                  <label htmlFor="personal">Remote Coaching</label>
+                  <label htmlFor="remoteCoaching">Remote Coaching</label>
                 </div>
                 <div
                   onClick={() => toggleIndex(3)}
@@ -118,9 +206,11 @@ const LetsConnect = () => {
                   <input
                     className="hidden"
                     type="radio"
-                    id="personal"
-                    value={"personal"}
-                    name="personal"
+                    id="nutrition"
+                    value={"nutrition"}
+                    name="service"
+                    checked={index[3]}
+                    onChange={() => {}} // Necessary for controlled component
                   />
                   <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
                     <span
@@ -129,7 +219,7 @@ const LetsConnect = () => {
                       } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
                     />
                   </span>
-                  <label htmlFor="personal">Nutrition</label>
+                  <label htmlFor="nutrition">Nutrition</label>
                 </div>
                 <div
                   onClick={() => toggleIndex(4)}
@@ -138,9 +228,11 @@ const LetsConnect = () => {
                   <input
                     className="hidden"
                     type="radio"
-                    id="personal"
-                    value={"personal"}
-                    name="personal"
+                    id="athleteBased"
+                    value={"athleteBased"}
+                    name="service"
+                    checked={index[4]}
+                    onChange={() => {}} // Necessary for controlled component
                   />
                   <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
                     <span
@@ -149,7 +241,7 @@ const LetsConnect = () => {
                       } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
                     />
                   </span>
-                  <label htmlFor="personal">Athlete Based</label>
+                  <label htmlFor="athleteBased">Athlete Based</label>
                 </div>
                 <div
                   onClick={() => toggleIndex(5)}
@@ -158,9 +250,11 @@ const LetsConnect = () => {
                   <input
                     className="hidden"
                     type="radio"
-                    id="personal"
-                    value={"personal"}
-                    name="personal"
+                    id="forHer"
+                    value={"forHer"}
+                    name="service"
+                    checked={index[5]}
+                    onChange={() => {}} // Necessary for controlled component
                   />
                   <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
                     <span
@@ -169,7 +263,7 @@ const LetsConnect = () => {
                       } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
                     />
                   </span>
-                  <label htmlFor="personal">For her</label>
+                  <label htmlFor="forHer">For her</label>
                 </div>
                 <div
                   onClick={() => toggleIndex(6)}
@@ -178,9 +272,11 @@ const LetsConnect = () => {
                   <input
                     className="hidden"
                     type="radio"
-                    id="personal"
-                    value={"personal"}
-                    name="personal"
+                    id="otherQuery"
+                    value={"otherQuery"}
+                    name="service"
+                    checked={index[6]}
+                    onChange={() => {}} // Necessary for controlled component
                   />
                   <span className="checker flex justify-center items-center hover:cursor-pointer max-mid:min-w-[15.36px] custom:min-w-[25.45px] custom:min-h-[25.45px]">
                     <span
@@ -189,7 +285,7 @@ const LetsConnect = () => {
                       } custom:min-w-[11.33px] custom:min-h-[11.33px]`}
                     />
                   </span>
-                  <label htmlFor="personal">Other Query</label>
+                  <label htmlFor="otherQuery">Other Query</label>
                 </div>
               </div>
             </div>
@@ -209,20 +305,18 @@ const LetsConnect = () => {
                 className="w-full h-[341.8px] pt-[33.62px] pb-[21.21px] flex flex-col items-center justify-between text-[#3A4B5B] font-gilroyreal1 font-normal text-[22.62px] leading-[27.14px] max-custom:h-[184.42px] max-custom:pt-[17.62px] max-custom:pb-[11.48px] max-custom:text-[12.24px] max-custom:leading-[14.62px]
               max-mid:h-[329.29px] max-mid:pt-[24px] max-mid:pb-[30px] max-mid:text-[16px] max-mid:leading-[19.2px]"
               >
-                {/* <div
-                  className="w-[588px] h-[49.34px] border-b-[1.4px] border-[#3A4B5B] text-start pt-[8px]
-                max-custom:w-[318.62px] max-custom:h-[27.08px] max-custom:pt-[4.59px] max-mid:w-[280px] max-mid:h-[39.1px] max-mid:pt-[8.48px]"
-                >
-                  Name
-                </div> */}
                 <div
                   className="relative w-[588px] h-[49.34px] border-b-[1.4px] border-[#3A4B5B] text-start pt-[8px]
                 max-custom:w-[318.62px] max-custom:h-[27.08px] max-custom:pt-[4.59px] max-mid:w-[280px] max-mid:h-[39.1px] max-mid:pt-[8.48px]"
                 >
                   <input
                     type="text"
+                    id="name"
                     placeholder="Name"
                     className="border-b-2 border-gray-400 focus:outline-none focus:border-blue-500 w-full py-2 placeholder-gray-500"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
                 <div
@@ -230,9 +324,13 @@ const LetsConnect = () => {
                 max-custom:w-[318.62px] max-custom:h-[27.08px] max-custom:pt-[4.59px] max-mid:w-[280px] max-mid:h-[39.1px] max-mid:pt-[8.48px]"
                 >
                   <input
-                    type="text"
+                    type="tel"
+                    id="phone"
                     placeholder="Phone"
                     className="border-b-2 border-gray-400 focus:outline-none focus:border-blue-500 w-full py-2 placeholder-gray-500"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
                   />
                 </div>
                 <div
@@ -240,9 +338,13 @@ const LetsConnect = () => {
                 max-custom:w-[318.62px] max-custom:h-[27.08px] max-custom:pt-[4.59px] max-mid:w-[280px] max-mid:h-[39.1px] max-mid:pt-[8.48px]"
                 >
                   <input
-                    type="text"
+                    type="email"
+                    id="email"
                     placeholder="E-mail address"
                     className="border-b-2 border-gray-400 focus:outline-none focus:border-blue-500 w-full py-2 placeholder-gray-500"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
                 <div
@@ -250,16 +352,19 @@ const LetsConnect = () => {
                 max-custom:w-[318.62px] max-custom:h-[47.08px] max-custom:pt-[4.59px] max-mid:w-[280px] max-mid:h-[70px] max-mid:pt-[8.48px]"
                 >
                   <input
-                    type="text"
+                    id="message"
                     placeholder="Message"
                     className="border-b-2 border-gray-400 focus:outline-none focus:border-blue-500 w-full py-2 placeholder-gray-500 h-[88.34px] max-custom:h-[47.08px] max-mid:h-[70px] "
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
               </div>
 
               {/* Button */}
               <button
-                className="w-[588px] h-[63px] border-[2.63px] border-[#3A4B5B] flex justify-center items-center text-[#3A4B5B] 
+                type="submit"
+                className="w-[588px] h-[63px] border-[2.63px] border-[#3A4B5B] flex justify-center items-center text-[#3A4B5B]
                max-custom:w-[317.17px] max-custom:h-[34.1px] max-custom:border-[1.4px] max-mid:w-[280px] max-mid:h-[40px]
                  hover:bg-[#3A4B5B] hover:text-white"
               >
@@ -267,8 +372,11 @@ const LetsConnect = () => {
                   SEND MESSAGE
                 </p>
               </button>
+              {submitMessage && (
+                <p className="mt-2 text-center">{submitMessage}</p>
+              )}
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </>

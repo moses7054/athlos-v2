@@ -1,6 +1,7 @@
 import RoundRotateImage from "@/assets/NavAssets/CircleRotate.svg";
 import Link from "next/link";
 import Image from "next/image";
+import MobileMenu from "./MobileMenu";
 
 const Hero = () => {
   return (
@@ -12,9 +13,10 @@ const Hero = () => {
       <div className="flex w-full absolute top-0 left-0 justify-between px-[94px] py-[40px] max-[1080px]:px-[52px] max-[600px]:px-[12px]">
         <div className="w-[218.48px] h-[63px] flex justify-between items-center max-custom:w-[116.11px] max-custom:h-[33.42px] max-mid:w-[97px] max-mid:h-[27.92px]">
           {/* symbol */}
-          <div
+          <Link
             className="w-[70.64px] h-full max-custom:w-[37.48px] max-custom:h-[33.43px]
             max-mid:w-[31.31px] max-mid:h-[27.92px] "
+            href={"/"}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +24,7 @@ const Hero = () => {
               // height="32"
               fill="none"
               viewBox="0 0 35 32"
-              className="w-[77px] h-[69px] max-custom:w-[37.48px] max-custom:h-[33.43px]  max-mid:w-[31.31px] max-mid:h-[27.92px]"
+              className="w-[77px] h-[69px]  max-custom:w-[37.48px] max-custom:h-[33.43px]  max-mid:w-[31.31px] max-mid:h-[27.92px]"
             >
               <g filter="url(#filter0_d_116_17)">
                 <path
@@ -65,7 +67,7 @@ const Hero = () => {
                 </filter>
               </defs>
             </svg>
-          </div>
+          </Link>
 
           {/* text */}
           <div className="w-[135px] h-[29px] max-custom:w-[74px] max-custom:h-[19px] max-mid:w-[62px] max-mid:h-[18px]">
@@ -136,6 +138,7 @@ const Hero = () => {
             Trainings
           </Link>
         </span>
+        <MobileMenu />
       </div>
       <h1 className="text-white font-gilroyreal2 text-[125px] leading-[90%] p-[94px] pb-0 mt-[100px] z-50  max-[1080px]:p-0 max-[1080px]:text-[66.304px] max-[1080px]:mt-28 max-[1080px]:ml-[49px] max-[600px]:text-[38.62px] max-[600px]:ml-[12px] max-[600px]:w-[255px]">
         discover <span className="outline-heading">the</span> <br></br>

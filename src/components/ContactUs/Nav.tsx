@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import MobileMenu from "../NavComponents/MobileMenu";
 
 const Nav = () => {
   return (
@@ -154,6 +155,7 @@ const Nav = () => {
             <Link href={"/"}>Contact Us</Link>
             <Link href={"/"}>Trainings</Link>
           </div>
+          <MobileMenu />
         </div>
       </div>
     </>
