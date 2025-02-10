@@ -59,10 +59,10 @@ const LetsConnect = () => {
     setSubmitMessage("Submitting...");
 
     const formData = {
-      service: service,
       name: name,
       phone: phone,
       email: email,
+      service: service,
       message: message,
     };
 
